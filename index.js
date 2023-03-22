@@ -2,7 +2,7 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const app = express();
-app.use(cors({ origin: "http://localhost:3001", credentials: true }));
+// app.use(cors({ origin: "http://localhost:3001", credentials: true }));
 // Set up cookie-parser middleware
 app.use(cookieParser("secret"));
 
