@@ -22,19 +22,19 @@ app.get("/auth", (req, res) => {
     signed: true,
     sameSite: "none",
     secure: true,
-    // domain: "localhost:3001",
+    domain: ".vercel.app",
   });
   res.send("Hello AUTH!");
 });
 
-// app.get("/check", (req, res) => {
-//   const avail = req.signedCookies["jwt-token"];
-//   if (avail) {
-//     res.json("Cookie is available");
-//   } else {
-//     res.json("Cookie is not available");
-//   }
-// });
+app.get("/check", (req, res) => {
+  const avail = req.signedCookies["jwt-token"];
+  if (avail) {
+    res.json("Cookie is available");
+  } else {
+    res.json("Cookie is not available");
+  }
+});
 
 app.listen(process.env.PORT || 3000, () => {
   console.log("Example app listening on port 3000!");
