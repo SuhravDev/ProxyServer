@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3001", "https://proxy-client-sage.vercel.app/"],
+    origin: ["http://localhost:3001", "https://proxy-client-sage.vercel.app"],
     credentials: true,
   })
 );
