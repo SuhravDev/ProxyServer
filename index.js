@@ -16,13 +16,14 @@ app.get("/", (req, res) => {
 });
 
 app.get("/auth", (req, res) => {
+  res.cookie("ano-token", "THIS IS JWT");
   res.cookie("jwt-token", "THIS IS JWT", {
     httpOnly: true,
     maxAge: 30000,
     signed: true,
     sameSite: "none",
     secure: true,
-    domain: ".vercel.app",
+    domain: "localhost:3001",
   });
   res.send("Hello AUTH!");
 });
