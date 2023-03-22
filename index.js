@@ -24,7 +24,6 @@ app.get("/auth", (req, res) => {
     signed: true,
     sameSite: "none",
     secure: true,
-    domain: "proxy-server-steel-nu.vercel.app",
   });
   res.send("Hello AUTH!");
 });
