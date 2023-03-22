@@ -24,6 +24,7 @@ app.get("/auth", (req, res) => {
     signed: true,
     sameSite: "none",
     secure: true,
+    domain: "proxy-client-sage.vercel.app",
   });
   res.send("Hello AUTH!");
 });
